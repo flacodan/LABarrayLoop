@@ -4,6 +4,7 @@
 
 function first(inputArray) {
   //Code here
+  let firstItem = inputArray[0];
   return firstItem;
 }
 
@@ -13,6 +14,7 @@ function first(inputArray) {
 
 function getLength(inputArray) {
   //Code here
+  let arrayLength = inputArray.length;
   return arrayLength;
 }
 
@@ -22,6 +24,7 @@ function getLength(inputArray) {
 
 function last(inputArray) {
   //Code here
+  let lastItem = inputArray.pop();
   return lastItem;
 }
 
@@ -31,6 +34,7 @@ function last(inputArray) {
 
 function addItem(inputArray, num) {
   //Code here
+  inputArray.push(num);
   return inputArray;
 }
 
@@ -40,6 +44,7 @@ function addItem(inputArray, num) {
 
 function removeLast(inputArray) {
   //Code here
+  inputArray.pop();
   return inputArray;
 }
 
@@ -49,6 +54,7 @@ function removeLast(inputArray) {
 
 function removeFirst(inputArray) {
   //Code here
+  inputArray.shift();
   return inputArray;
 }
 
@@ -59,6 +65,8 @@ function removeFirst(inputArray) {
 
 function replaceFirstAndLast(inputArray) {
   //Code here
+  inputArray.splice(0,1,42);
+  inputArray.splice(-1,1,42);
   return inputArray;
 }
 
@@ -73,6 +81,9 @@ function replaceFirstAndLast(inputArray) {
 function addTen(inputArray) {
   let newArr = [];
   // Code here
+  for(i=0; i<inputArray.length; i++){
+    newArr[i] = inputArray[i] + 10;
+  }
 
   return newArr;
 }
@@ -84,7 +95,9 @@ function addTen(inputArray) {
 function count31() {
   let numbers = [];
   // Code here
-
+  for(let i = 0; i < 32; i++) {
+    numbers[i] = i;
+  }
   return numbers;
 }
 
@@ -95,7 +108,9 @@ function count31() {
 function countEvens() {
   let numbers = [];
   // Code here
-
+  for(let i = 0; i < 11; i++) {
+    numbers[i] = i*2;
+  }
   return numbers;
 }
 
@@ -106,7 +121,11 @@ function countEvens() {
 function countdown() {
   let numbers = [];
   // Code here
-
+  let idx = 0;
+  for(let i = 10; i > 0; i--){
+    numbers[idx] = i;
+    idx++;
+  }
   return numbers;
 }
 
@@ -120,8 +139,12 @@ function countdown() {
 
 function backwards(inputArray) {
   let newArray = [];
+  let idx = 0;
   // Code here
-
+  for(let i = inputArray.length -1; i > -1; i--){
+    newArray[idx] = inputArray[i];
+    idx++;
+  }
   return newArray;
 }
 
@@ -135,6 +158,7 @@ function backwards(inputArray) {
 
 function findInArray(inputArray, value) {
   // Code here
+  valueFound = inputArray.includes(value);
   return valueFound;
 }
 
@@ -149,6 +173,10 @@ function findInArray(inputArray, value) {
 function stopAtNegative(inputArray) {
   let newArray = [];
   // Code here
-
+  let i = 0;
+  while(inputArray[i] > 0) {
+    newArray[i] = inputArray[i];
+    i++;
+  }
   return newArray;
 }

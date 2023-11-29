@@ -81,10 +81,15 @@ function replaceFirstAndLast(inputArray) {
 function addTen(inputArray) {
   let newArr = [];
   // Code here
-  for(i=0; i<inputArray.length; i++){
-    newArr[i] = inputArray[i] + 10;
-  }
+  // for(i=0; i<inputArray.length; i++){
+  //   newArr[i] = inputArray[i] + 10;
+  // }
 
+  let idx = 0;
+  for(const num of inputArray){
+    newArr[idx] = inputArray[idx] + 10;
+    idx++;
+  }
   return newArr;
 }
 
